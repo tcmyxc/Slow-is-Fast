@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]--><!--[if IE 7 ]>    <html class="ie7"> <![endif]--><!--[if IE 8 ]>    <html class="ie8"> <![endif]--><!--[if IE 9 ]>    <html class="ie9"> <![endif]--><!--[if !IE]><!--> <html>         <!--<![endif]--><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="en:locale" content="zh_CN_evernoteChina" />
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="initial-scale=1" />
+      <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>欢迎回来</title>
+
+    <!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+window.ga('create', 'UA-117332876-4',
+    'auto', {});
+window.ga('require', 'displayfeatures');
+
+
+/* <![CDATA[ */
+  
+  window.ga('set', 'dimension34', '/shard/s44/nl/33094817/ff2804c3-4b1f-46e5-a1f4-96d208517406/res/3d3965cf-dc72-44de-9762-7e1be411fd4a/1485398-20181022232217633-124484857.jpg');
+  
+  window.ga('set', 'dimension7', 'dba6539f-bd30-4f73-abaf-5f6d6993a439');
+  
+  window.ga('set', 'location', 'https://app.yinxiang.com/notelink/Login.action');
+  
+/* ]]> */
+</script>
+<!-- End Google Analytics -->
+<script type="text/javascript">
+  window.ga('send', 'pageview', '/notelink/Login.action');
+</script>
+<!--[if lt IE 9]>
+    <script src="/redesign/global/js/html5shiv.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/ro/LzhiNzJiZGQ5YWZkNzA3ODZkYjM1NTM3MDY4YWY0ZDc0MzM3OTExMTguY3Nz
+/Lzg2ODMxMDE1OWZkZTRjYWRjZTJiNGY0OTBiZTdmNWUyZTE3ODRmYjkuY3Nz
+/LzdjMWRjYWE4YzhhZDhkODk2NDIyMmIzNWJiYzI5ZTEzNjk2ZTM4OGYuY3Nz
+/LzE4YjUzZDk3NjEzNTc1YjYyNzhlN2U1MmY5ZTUxNDBiNzA4NzE0YzAuY3Nz
+/LzI0NDRjYmQyOTk0MGVlNDA1YmYxYmIwMmIxZmQxNWI0ODE4NWMxYzcuY3Nz
+/2037411414.css"/><link rel="stylesheet" href="/ro/LzM0OGZhMjIyY2MwZGFkZmI4NzA3OTM3YjQwMGU4ODNiYjdhZGQxZDUuY3Nz
+/LzRjZjg3MjhhM2RjNDkwZjM3ZjYyNGM0NjJkZDI4ZmRhNDU4MTM5ZGYuY3Nz
+/155889142.css"/></head><body class="wrapper"><div class="bar-header">
+      <div class="logo-bar"></div>
+    </div>  
+  <div id="container-boundingbox" class="wrapper">
+      <div id="container" class="wrapper">
+        <div class="main">
+          <div class="web-redirect-banner">
+  <div>
+      <p>Evernote 已基于你的访问地信息，将你自动跳转至印象笔记网页。收藏此网页、下载印象笔记APP体验更多“印象笔记帐户”专属新功能。Markdown，思维导图，新版外链分享，任务清单，OCR，素材库等更多新功能等你体验。</p>
+      <p>You have been redirected from Evernote.com to Yinxiang.com based on your location.</p>
+  </div>
+  <!-- <button class="gotoen">Back to Evernote.com</button> -->
+  <div class="close-button"></div>
+  </div>
+<div class="MinimalFormFrame"><div class="heading">
+      <div class="branding"></div>
+      <h1>登录</h1>
+      <h2>请输入以下信息来查看笔记</h2>
+      </div>
+  <div class="minimal-wrapper">
+    <div class="minimal-body">
+      <div class="MinimalLoginForm"><div class="signin">
+    <form method="post" autocomplete="on" name="login_form" action="/notelink/Login.action" id="login_form" class="minimal-form"><div class="success-notification-light">
+        </div>
+      <ol>
+        <li class="Row">
+            <label for="username">手机号、邮箱或用户名</label>
+                <div id="email-wrapper">
+              <input maxlength="255" name="username" id="username" type="text" class="TextInput TextInput_large" /><script type="text/javascript">setTimeout(function(){try{var z=document.getElementById('username');z.focus();z.select();}catch(e){}},1);</script></div>
+          </li>
+          <li class="Row CanBePulledDown" id="passwordRow">
+            <label for="password">密码</label>
+            <div id="password-wrapper">
+              <input maxlength="64" name="password" id="password" type="password" class="TextInput TextInput_large" /></div>
+          </li>
+          <li class="Row CanBePulledDown" id="responseMessageRow">
+            <div id="responseMessage" class="PullableText"></div>
+          </li>
+          <li class="checkbox-container SwitchInput Row CanBePulledDown PulledIntoView" id="rememberMeRow">
+              <input name="rememberMe" id="rememberMe" type="checkbox" class="checkbox" value="true" /><label for="rememberMe">30 天内记住我</label>
+            </li>
+          <li class="Row CanBePulledDown PulledIntoView" id="submitRow">
+              <input type="hidden" name="evaluateUsername" id="eventToTrigger" />
+              <input name="loginButton" id="loginButton" type="submit" class="Btn Btn_emph Btn_super" value="继续" /></li>
+          </ol>
+      <div class="forgotPasswordContainer CanBePulledDown" id="forgotPasswordDiv">
+          <a href="https://app.yinxiang.com/ForgotPassword.action?targetUrl=%2Fshard%2Fs44%2Fnl%2F33094817%2Fff2804c3-4b1f-46e5-a1f4-96d208517406%2Fres%2F3d3965cf-dc72-44de-9762-7e1be411fd4a%2F1485398-20181022232217633-124484857.jpg" target="_top" class="forgot-password">
+                忘记密码？</a>
+            </div>
+      <div class="wechat_login">
+          <div class="separator">
+            <div class="line"></div>
+            <p class="text">或</p>
+            <div class="line"></div>
+          </div>
+          <div class="Btn Btn_emph Btn_super Btn_Yx">
+            <img src="https://static.app.yinxiang.com/embedded-web/web/static/media/wechat_icon@2x.e20b7172.png"/>
+            <span>使用微信登录</span>
+          </div>
+        </div>
+      <input type="hidden" name="analyticsLoginOrigin" value="other" /><input type="hidden" name="clipperFlow" value="false" /><input type="hidden" name="showSwitchService" value="true" /><input type="hidden" name="usernameImmutable" value="false" /><input type="hidden" name="targetUrl" value="/shard/s44/nl/33094817/ff2804c3-4b1f-46e5-a1f4-96d208517406/res/3d3965cf-dc72-44de-9762-7e1be411fd4a/1485398-20181022232217633-124484857.jpg" /><div style="display: none;"><input type="hidden" name="_sourcePage" value="hOp05Zt0N9PiMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP" /><input type="hidden" name="__fp" value="WLK-PVqnM6o3yWPvuidLz-TPR6I9Jhx8" /></div></form></div>
+  </div></div>
+  </div>
+  <div id="context-switch">
+      <div class="t-pico">
+          没有帐号？</div>
+      <div class="switch">
+        <form method="post" action="/notelink/Registration.action" id="switch-form"><a id="switch-link">创建帐户</a>
+        <input type="hidden" name="analyticsLoginOrigin" value="other" /><input type="hidden" name="clipperFlow" value="false" /><input type="hidden" name="showSwitchService" value="true" /><input type="hidden" name="usernameImmutable" value="false" /><input type="hidden" name="targetUrl" value="/shard/s44/nl/33094817/ff2804c3-4b1f-46e5-a1f4-96d208517406/res/3d3965cf-dc72-44de-9762-7e1be411fd4a/1485398-20181022232217633-124484857.jpg" /><div style="display: none;"><input type="hidden" name="_sourcePage" value="YZaSAqqvFyniMUD9T65RG_YvRLZ-1eYO3fqfqRu0fynRL_1nukNa4gH1t86pc1SP" /><input type="hidden" name="__fp" value="J_lPMTCEx8w=" /></div></form></div>
+    </div>
+  </div></div>
+
+        <div class="footer wrapper">
+  <a href="https://www.yinxiang.com/tos/" class="footer-entry" target="_blank">服务条款</a><a href="https://www.yinxiang.com/privacy/" class="footer-entry" target="_blank">隐私政策</a><span class="footer-entry last">
+    版权所有 2007 - 2021 印象笔记。保留所有权利。</span>
+</div>
+</div>
+    </div>
+  <script type="text/javascript" src="/ro/L2RjOWVmYTJkNzQ5ODlhNGIxZWNjNjY2NTk3NDdjOGE3NDIwMmRjY2MuanM
+/LzVhNTI5YTY5ZGU4MWRhMDM5ZmQ2ZDM0NTVmNDc5YjU1MGIzOGMwOWUuanM
+/LzZhNWE1ZjQ4ZjNiNDVkY2YzNzc5ODc1Mzk2MDU5YWM5MWI4NmMyOTYuanM
+/L2UyZTEwNjVlZjUyZjc3NWZlM2Q3YTExY2IxZDgxMTllYzMwMThkNGIuanM
+/L2Y4Njc2ZmE4NzA5MTVlYjcxODllOWJkNjZiODg0OGE2ZjQ0NzZlMWQuanM
+/LzZjNTdhOTU4YWUzNjkwOGJjYjM1MGQ0MmM2YmZhMGUyMDliYzIwYTQuanM
+/-908676147.js"></script><script type="text/javascript">window.__EVERNOTE_ACTIONBEAN__ = {"oauthState":null,"usePasswordAuth":false,"evaluationMessage":null,"analyticsLoginOrigin":"other","openInAppUrl":null,"showTerms":false,"oauthRedirect":"https://app.yinxiang.com/Login.action?oauthLogin","showForgotPasswordLink":true,"showRememberMe":true,"oauthClientId":"447407681759.apps.googleusercontent.com","openIdScopesGoogle":"openid email profile","userIdentityIds":[],"userInET":false,"evernoteServiceBaseUrl":"https://www.evernote.com","thirdPartyLoginEnabled":true,"gnomeRedesignEnabled":false,"gnomeFreeTrialEnabled":true,"wechatLoginPath":"https://static.app.yinxiang.com/embedded-web/web/wechat-login","userShardId":null,"businessShardId":null,"slotSuffix":"","slotPrefix":"","currentUserId":null,"currentUserName":null,"userPrivilege":null,"userServiceLevel":null,"websocketUrl":"wss://ws.app.yinxiang.com/shard/null/id","headerJson":{},"endpoints":{"noteStoreUrl":null,"userStoreUrl":null,"utilityUrl":null,"messageStoreUrl":null,"noteStoreUrlForBusiness":null,"noteStoreUrlForBusinessAdmin":null,"userStoreUrlForBusiness":null,"utilityUrlForBusiness":null,"businessServiceUrl":null},"thriftEndpointBuilderConfig":{"shardUrlPrefix":"https://app.yinxiang.com/shard/","messageStoreUrlSuffix":"/messagestore","noteStoreUrlSuffix":"/notestore","userStoreUrlSuffix":"/edam/user","businessServiceUrlSuffix":"/edam/business","communicationEngineUrlSuffix":"/communicationengine","utilityStoreUrlSuffix":"/utility"},"cdnUIHostPath":"https://static.app.yinxiang.com","newTierSubscriptionRedirectUrl":"https://static.app.yinxiang.com/pay/subscriptions","newTierSubscriptionManageRedirectUrl":"https://static.app.yinxiang.com/pay/subscriptions/manage","userOnlyInET":false,"oauthError":null};</script><script type="text/javascript">require(['es6'], function() {});</script><script type="text/javascript">define("actionBean", [], function() {return window.__EVERNOTE_ACTIONBEAN__;});</script><script type="text/javascript" src="/redesign/global/js/i18n/i18nMessages_zh_CN_evernoteChina.js?version=1350"></script><script type="text/javascript" src="/ro/L2Q4M2NmMTM5MTM0ODY0OTAwNDdiNzNhMjdlYzI5NjE3YWVlNGQzMzAuanM
+/LzY5OGNiZjA4M2RhMzQ1YjY3MDMwMDk3OGY3NzQ3NDc5OTg5Mjc3MC5qcw
+/L2EyNDRjNzlhOTEzZDQwY2ZkMTNjMjVjMTIwYzQzYmI4N2VhYjY5NTkuanM
+/LzQwMjJmZmQ1NTcwYzUwMDA0ZWQ3YmE5NzVmZjBkMzg5YjYwOGVmM2YuanM
+/-1946278583.js"></script><!--[if !IE]><!--><script>if (/*@cc_on!@*/false) document.documentElement.className += ' ie10';</script><!--<![endif]--></body></html>

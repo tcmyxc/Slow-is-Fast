@@ -14,6 +14,7 @@
     - [Lua学习笔记](SomeNotes/Lua/Lua学习笔记.md)
     - [SVN学习笔记](SomeNotes/SVN/SVN学习.md)
     - [机器学习](SomeNotes/机器学习与深度学习/机器学习.md)
+        - [pytorch入门](SomeNotes/机器学习与深度学习/pytorch/pytorch.md)
     - [面试题](SomeNotes/2021面试题/2021面试题.md)
     - 刷题
         - [LeetCode](求职之路/刷题/LeetCode)

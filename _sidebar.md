@@ -8,9 +8,6 @@
     - [项目](求职之路/项目/README.md)
     - [设计模式](求职之路/设计模式/设计模式.md)
     - [Java](求职之路/Java/README.md)
-    - [Elasticsearrch](求职之路/Elasticsearch/Elasticsearch.md)
-    - [Redis学习笔记](SomeNotes/Java/Redis/Redis学习笔记.md)
-    - [Docker学习笔记](SomeNotes/Docker/Docker学习笔记.md)
     - [Lua学习笔记](SomeNotes/Lua/Lua学习笔记.md)
     - [SVN学习笔记](SomeNotes/SVN/SVN学习.md)
     - [机器学习](求职之路/机器学习/README.md)
@@ -18,7 +15,4 @@
     - 刷题
         - [LeetCode](求职之路/刷题/LeetCode)
         - [剑指offer](SomeNotes/剑指offer/剑指offer.md)
-    - [我的笔试面试](求职之路/我的笔试面试/README.md)
-    
-    
     

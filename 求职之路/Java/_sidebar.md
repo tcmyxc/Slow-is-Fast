@@ -5,4 +5,7 @@
 - JVM虚拟机
     - [Win10 环境下编译 openjdk15](求职之路/Java/JVM虚拟机/Win10环境下编译openjdk15.md)
 - [Maven构建工具](求职之路/Java/Maven工具/Maven学习笔记.md)
+- [Elasticsearrch](求职之路/Elasticsearch/Elasticsearch.md)
+- [Redis学习笔记](SomeNotes/Java/Redis/Redis学习笔记.md)
+- [Docker学习笔记](SomeNotes/Docker/Docker学习笔记.md)
 

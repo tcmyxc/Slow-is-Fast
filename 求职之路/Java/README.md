@@ -10,3 +10,5 @@
 - [Elasticsearrch](求职之路/Elasticsearch/Elasticsearch.md)
 - [Redis学习笔记](SomeNotes/Java/Redis/Redis学习笔记.md)
 - [Docker学习笔记](SomeNotes/Docker/Docker学习笔记.md)
+- [JPA学习笔记](求职之路/Java/JPA/notes/JPA学习笔记.md)
+- [Hibernate学习笔记](求职之路/Java/Hibernate学习/notes/hibernate.md)

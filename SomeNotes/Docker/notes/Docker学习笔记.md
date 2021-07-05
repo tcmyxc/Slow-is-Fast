@@ -6,7 +6,7 @@
 >
 > [2]百度百科
 
-<img src="Docker学习笔记.assets/DockerconLive2021.png" alt="img" style="zoom:67%;" />
+<img src="../images/DockerconLive2021.png" alt="img" style="zoom:67%;" />
 
 # 1、概述
 
@@ -58,11 +58,11 @@ Docker 容器通过 Docker 镜像来创建。容器与镜像的关系类似于�
 
 （4）Container容器 ：基于模板的实例
 
-<img src="Docker学习笔记.assets/container-what-is-container.png" alt="img" style="zoom: 50%;" />
+<img src="../images/container-what-is-container.png" alt="img" style="zoom: 50%;" />
 
 
 
-<img src="Docker学习笔记.assets/architecture.svg" alt="Docker架构图" style="zoom: 67%;" />
+<img src="../images/architecture.svg" alt="Docker架构图" style="zoom: 67%;" />
 
 > https://www.docker.com/resources/what-container
 
@@ -87,7 +87,7 @@ Docker使用一种称为`namespaces`的技术来提供称为*容器*的隔离工
 
 2.Docker利用的是宿主机的内核，而不需要Guest OS，因此，当新建一个容器时，Docker不需要和虚拟机一样重新加载一个操作系统，避免了引导、加载操作系统内核这个比较费时费资源的过程，当新建一个虚拟机时，虚拟机软件需要加载Guest OS，这个新建过程是分钟级别的，而Docker由于直接利用宿主机的操作系统则省略了这个过程，因此新建一个Docker容器只需要几秒钟。
 
-![image-20210216204625441](Docker学习笔记.assets/image-20210216204625441.png)
+![image-20210216204625441](../images/image-20210216204625441.png)
 
 # 安装步骤
 
@@ -179,7 +179,7 @@ $ sudo rm -rf /var/lib/docker
 
 ## 基本流程
 
-![image-20210216204045665](Docker学习笔记.assets/image-20210216204045665.png)
+![image-20210216204045665](../images/image-20210216204045665.png)
 
 
 

@@ -18,20 +18,26 @@ Servlet接口Sun公司有两个默认的实现类：HttpServlet，GenericServlet
 
 1. maven模板，webapp，修改web.xml（这部分看自己tomcat服务器web.xml是啥，然后复制个头文件过来就行）
 
-   ```java
-   <?xml version="1.0" encoding="UTF-8"?>
-   <web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   ```xml
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-                         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-            version="3.0">
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+            version="4.0"
+            metadata-complete="true">
    
+     
    </web-app>
    ```
 
    
 
 2. 将项目的结构补充完整，java和resources
+
+   ![image-20210620151553413](../images/image-20210620151553413.png)
+
+   
 
 3. 编写一个Servlet程序
 
@@ -82,10 +88,55 @@ Servlet接口Sun公司有两个默认的实现类：HttpServlet，GenericServlet
 
    - 注意配置项目发布的路径
 
-6. 测试
+   ![image-20210620153251176](../images/image-20210620153251176.png)
+
+6. 启动测试
 
 
 
 ## Servlet原理
 
 Servlet由Web服务器调用
+
+![image-20210620150127559](../images/image-20210620150127559.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -40,16 +40,27 @@
 - [Java代理、断言和日志](求职之路/Java/Java代理、断言和日志)
 - [Java集合](求职之路/Java/Java集合)
 
+# Spring框架
+- [Spring](SomeNotes/Java/Spring/Spring笔记.md)
+- [SpringMVC](SomeNotes/Java/SpringMVC/SpringMVC.md)
+- [SpringBoot](SomeNotes/Java/SpringBoot/SpringBoot.md)
+
 # JVM
 - [Win10 环境下编译 openjdk15](求职之路/Java/JVM虚拟机/Win10环境下编译openjdk15.md)
 
-# Maven
+# Maven构建工具
 - [Maven构建工具](求职之路/Java/Maven工具/Maven学习笔记.md)
 
 # Elasticsearch
 - [Elasticsearrch](求职之路/Elasticsearch/Elasticsearch.md)
 
-# Redis
+# Lucene
+- [Lucene学习笔记](SomeNotes/Java/Lucene/Lucene知识.md)
+
+# MyBatis
+- [MyBatis学习笔记](SomeNotes/Java/MyBatis/MyBatis学习之路.md)
+
+# Redis学习笔记
 - [Redis学习笔记](SomeNotes/Java/Redis/Redis学习笔记.md)
 
 # Docker
@@ -60,6 +71,10 @@
 
 # Hibernate
 - [Hibernate学习笔记](求职之路/Java/Hibernate学习/notes/hibernate.md)
+
+# Nginx
+- [Nginx学习笔记(狂神版)](SomeNotes/Nginx/notes/Nginx学习笔记(狂神版).md)
+- [Nginx学习笔记(尚硅谷版)](SomeNotes/Nginx/notes/Nginx学习笔记(尚硅谷版).md)
 
 # 设计模式
 - [设计模式](求职之路/设计模式/设计模式.md)

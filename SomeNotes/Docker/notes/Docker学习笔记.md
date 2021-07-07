@@ -20,6 +20,8 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 基于 Go 语言 并遵从 Apache2.0 协议开源。
 
+<!-- more -->
+
 ## 什么是容器？
 
 容器是打包代码及其所有依赖项的软件的标准单元，因此应用程序可以从一个计算环境快速可靠地运行到另一个计算环境。
@@ -108,21 +110,16 @@ $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
-    gnupg-agent \
+    gnupg \
+    lsb-release \
     software-properties-common
 
- $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - # 官方
+ 
+$ curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add - # 国内
 
 # 设置国内的仓库
-$ sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-   
-$ sudo add-apt-repository \
-   "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/ \
-  $(lsb_release -cs) \
-  stable"
+$ sudo add-apt-repository "deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
   
 # 更新包索引
 $ sudo apt-get update
@@ -184,6 +181,42 @@ $ sudo rm -rf /var/lib/docker
 
 
 # 常用命令
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

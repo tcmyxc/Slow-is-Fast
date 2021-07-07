@@ -139,8 +139,7 @@ for(doule u: myList){
 - sort方法
 
   ```java
-  Arrays.sort(数组名);
-  Arrays.sort(数组名, beginIndex, endIndex);
+  Arrays.sort(数组名);Arrays.sort(数组名, beginIndex, endIndex);
   ```
 
 - binSearch二分查找法
@@ -210,7 +209,7 @@ for(doule u: myList){
 - 重命名和删除文件的方法也有
 - 创建一个File实例不会在机器上创建一个文件出来，而且不管这个文件是否存在，文件对象都能创建成功
 
-![image-20200610214102343](Java基础知识复习.assets/image-20200610214102343.png)
+![image-20200610214102343](../images/image-20200610214102343.png)
 
 
 
@@ -223,13 +222,13 @@ for(doule u: myList){
 - 一般是从`System.in`创建，但是也可以从字符串，文件创建
 - 读完文件最好关闭，可以释放资源
 
-![image-20200610215054509](Java基础知识复习.assets/image-20200610215054509.png)
+![image-20200610215054509](../images/image-20200610215054509.png)
 
 
 
-![image-20200611222834269](Java基础知识复习.assets/image-20200611222834269.png)
+![image-20200611222834269](../images/image-20200611222834269.png)
 
-![image-20200611222915972](Java基础知识复习.assets/image-20200611222915972.png)
+![image-20200611222915972](../images/image-20200611222915972.png)
 
 
 
@@ -240,30 +239,12 @@ for(doule u: myList){
 - 必须使用close方法关闭文件，不然文件不能正确保存
 
 ```java
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-
-public class WriteData {
-    public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("data.txt");
-        if(file.exists()){
-            System.out.println("文件已存在");
-            System.exit(0);
-        }
-
-        PrintWriter output = new PrintWriter(file);
-
-        // 一些语句
-
-        output.close();
-    }
-}
+import java.io.File;import java.io.FileNotFoundException;import java.io.PrintWriter;public class WriteData {    public static void main(String[] args) throws FileNotFoundException {        File file = new File("data.txt");        if(file.exists()){            System.out.println("文件已存在");            System.exit(0);        }        PrintWriter output = new PrintWriter(file);        // 一些语句        output.close();    }}
 ```
 
 
 
-![image-20200610214935221](Java基础知识复习.assets/image-20200610214935221.png)
+![image-20200610214935221](../images/image-20200610214935221.png)
 
 
 
@@ -273,25 +254,25 @@ public class WriteData {
 
 #### 二进制I/O
 
-![image-20200611223333344](Java基础知识复习.assets/image-20200611223333344.png)
+![image-20200611223333344](../images/image-20200611223333344.png)
 
 
 
 ##### `FileInputStream`和`FileOutputStream`
 
-![image-20200611223603345](Java基础知识复习.assets/image-20200611223603345.png)
+![image-20200611223603345](../images/image-20200611223603345.png)
 
 
 
 ##### `FilterInputStream`和`FilterOutputStream`
 
-![image-20200611223750023](Java基础知识复习.assets/image-20200611223750023.png)
+![image-20200611223750023](../images/image-20200611223750023.png)
 
 
 
 ##### `DataInputStream`和`DataOutputStream`
 
-![image-20200611223932715](Java基础知识复习.assets/image-20200611223932715.png)
+![image-20200611223932715](../images/image-20200611223932715.png)
 
 
 
@@ -299,7 +280,7 @@ public class WriteData {
 
 ##### `BufferedInputStream`和`BufferedOutputStream`
 
-![image-20200611224059168](Java基础知识复习.assets/image-20200611224059168.png)
+![image-20200611224059168](../images/image-20200611224059168.png)
 
 
 
@@ -313,7 +294,7 @@ public class WriteData {
 
 - 允许在文件的任意位置上进行读写
 
-![image-20200611225408504](Java基础知识复习.assets/image-20200611225408504.png)
+![image-20200611225408504](../images/image-20200611225408504.png)
 
 
 
@@ -323,7 +304,7 @@ public class WriteData {
 - 不能存储基本数据类型（那就用包装的类呗）
 - 有很多使用的方法，比如contains方法
 
-![image-20200611214606849](Java基础知识复习.assets/image-20200611214606849.png)
+![image-20200611214606849](../images/image-20200611214606849.png)
 
 
 
@@ -385,38 +366,23 @@ public class WriteData {
 
 ## lambda表达式
 
-![image-20200611214434103](Java基础知识复习.assets/image-20200611214434103.png)
+![image-20200611214434103](../images/image-20200611214434103.png)
 
 
 
 ## 异常处理
 
 ```java
-try{
-    statements;
-}
-catch(Exception1 exVar1){
-    statements;
-}
-catch(Exception2 exVar2){
-    statements;
-}
-...
-catch(ExceptionN exVarN){
-    statements;
-}
-finally{
-    
-}
+try{    statements;}catch(Exception1 exVar1){    statements;}catch(Exception2 exVar2){    statements;}...catch(ExceptionN exVarN){    statements;}finally{    }
 ```
 
 
 
-<img src="Java基础知识复习.assets/image-20200611215659437.png" alt="image-20200611215659437" style="zoom:150%;" />
+<img src="../images/image-20200611215659437.png" alt="image-20200611215659437" style="zoom:150%;" />
 
 
 
-![image-20200611215953441](Java基础知识复习.assets/image-20200611215953441.png)
+![image-20200611215953441](../images/image-20200611215953441.png)
 
 
 
@@ -431,9 +397,7 @@ finally{
 - `abstract`关键字
 
   ```java
-  public abstract class 类名{
-      // 实现
-  }
+  public abstract class 类名{    // 实现}
   ```
 
 - 不能new对象
@@ -487,11 +451,11 @@ finally{
 
 `Collection`
 
-![image-20200611230902328](Java基础知识复习.assets/image-20200611230902328.png)
+![image-20200611230902328](../images/image-20200611230902328.png)
 
 
 
-![image-20200611230934095](Java基础知识复习.assets/image-20200611230934095.png)
+![image-20200611230934095](../images/image-20200611230934095.png)
 
 - 两个对象相同，则哈希码必定相同
 
@@ -501,7 +465,7 @@ finally{
 
 **迭代器**
 
-![image-20200611231050823](Java基础知识复习.assets/image-20200611231050823.png)
+![image-20200611231050823](../images/image-20200611231050823.png)
 
 
 
@@ -513,7 +477,7 @@ finally{
 
 
 
-![image-20200611234151801](Java基础知识复习.assets/image-20200611234151801.png)
+![image-20200611234151801](../images/image-20200611234151801.png)
 
 
 
@@ -535,7 +499,7 @@ finally{
 
 ### `List`接口
 
-![image-20200611232210492](Java基础知识复习.assets/image-20200611232210492.png)
+![image-20200611232210492](../images/image-20200611232210492.png)
 
 
 
@@ -561,7 +525,7 @@ finally{
 
 集合和线性表的静态方法：
 
-![image-20200611233111473](Java基础知识复习.assets/image-20200611233111473.png)
+![image-20200611233111473](../images/image-20200611233111473.png)
 
 
 
@@ -571,7 +535,7 @@ finally{
 
 `Queue`接口
 
-![image-20200611233544725](Java基础知识复习.assets/image-20200611233544725.png)
+![image-20200611233544725](../images/image-20200611233544725.png)
 
 
 
@@ -579,11 +543,11 @@ finally{
 
 - `LinkedList`
 
-  ![image-20200611233744153](Java基础知识复习.assets/image-20200611233744153.png)
+  ![image-20200611233744153](../images/image-20200611233744153.png)
 
 - `PriorityQueue`优先队列（最高优先级的先出队）
 
-  - ![image-20200611233852951](Java基础知识复习.assets/image-20200611233852951.png)
+  - ![image-20200611233852951](../images/image-20200611233852951.png)
   - 就是个堆
   - 不允许null值
   - 线程不安全
@@ -596,7 +560,7 @@ finally{
 
 ### `Vector`
 
-![image-20200611233339407](Java基础知识复习.assets/image-20200611233339407.png)
+![image-20200611233339407](../images/image-20200611233339407.png)
 
 - 线程安全的，只要是关键性的操作，方法前面都加了synchronized关键字
 
@@ -604,7 +568,7 @@ finally{
 
 ### `Stack`
 
-![image-20200611233406521](Java基础知识复习.assets/image-20200611233406521.png)
+![image-20200611233406521](../images/image-20200611233406521.png)
 
 
 
@@ -614,15 +578,15 @@ finally{
 
 键是惟一的
 
-![image-20200611234850185](Java基础知识复习.assets/image-20200611234850185.png)
+![image-20200611234850185](../images/image-20200611234850185.png)
 
-![image-20200611234913368](Java基础知识复习.assets/image-20200611234913368.png)
+![image-20200611234913368](../images/image-20200611234913368.png)
 
 
 
 具体实现类：
 
-![image-20200611235120280](Java基础知识复习.assets/image-20200611235120280.png)
+![image-20200611235120280](../images/image-20200611235120280.png)
 
 
 
@@ -648,62 +612,11 @@ finally{
 
 - jdk8中put方法：先计算key的哈希值，然后调用putVal方法==>先判断哈希表是否为空，为空就扩容，不为空计算出key在哈希表中的位置i，看table[i]是否为空，为空就直接新建一个节点放进去，不为空判断当前位置的hash值，key和要插入的是否相同，相同则根据要求看是否覆盖val，不相同就查看table[i]是否是红黑树节点，如果是的话就用红黑树直接插入键值对，如果不是开始遍历链表插入，如果遇到hash值,key相同的，根据要求看是否覆盖val，否则直接尾插法插入，如果链表长度大于8，转为红黑树结构，执行完成后看size是否大于阈值threshold，大于就扩容，否则直接结束
 
-    ```java
-    final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
-      Node<K,V>[] tab; //节点表
-      Node<K,V> p; //工作指针
-      int n, i;
-      //如果hash表未初始化，或者表的长度为0，则给一个默认的容量16，这里将n初始化为表的长度
-      if ((tab = table) == null || (n = tab.length) == 0)
-        n = (tab = resize()).length;
-      //计算在hash表中的位置，如果这个位置为空，则插入这个节点
-      if ((p = tab[i = (n - 1) & hash]) == null)
-        tab[i] = newNode(hash, key, value, null);
-      else {
-        Node<K,V> e; 
-        K k;
-        //判断桶中第一个元素（可以认为是链表头）的hash值，key值和要插入的hash值，key值是否相同，相同就记录下来，根据条件看是否覆盖val值
-        if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k))))
-          // 将第一个元素赋值给e，用e来记录
-          e = p;
-        //判断是否为红黑树节点
-        else if (p instanceof TreeNode)
-          e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
-        //链表节点
-        else {
-          for (int binCount = 0; ; ++binCount) {
-            //遍历链表，如果找到hash，key相同的，记录下这个节点，跳出循环，没找到就尾插，尾插之后判断是否需要转为红黑树
-            //到达链表尾，插入这个节点
-            if ((e = p.next) == null) {
-              p.next = newNode(hash, key, value, null);
-              //链表中节点的数量到达阈值8，变成红黑树
-              if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
-                treeifyBin(tab, hash);
-              break;
-            }
-            if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k))))
-              break;
-            p = e;
-          }
-        }
-        if (e != null) { // existing mapping for key
-          V oldValue = e.value;
-          // onlyIfAbsent为false或者旧值为null
-          if (!onlyIfAbsent || oldValue == null)
-            e.value = value;
-          afterNodeAccess(e);
-          return oldValue;
-        }
-      }
-      ++modCount;
-      if (++size > threshold)
-        resize();
-      afterNodeInsertion(evict);
-      return null;
-    }
-    ```
+  ```java
+  final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {  Node<K,V>[] tab; //节点表  Node<K,V> p; //工作指针  int n, i;  //如果hash表未初始化，或者表的长度为0，则给一个默认的容量16，这里将n初始化为表的长度  if ((tab = table) == null || (n = tab.length) == 0)    n = (tab = resize()).length;  //计算在hash表中的位置，如果这个位置为空，则插入这个节点  if ((p = tab[i = (n - 1) & hash]) == null)    tab[i] = newNode(hash, key, value, null);  else {    Node<K,V> e;     K k;    //判断桶中第一个元素（可以认为是链表头）的hash值，key值和要插入的hash值，key值是否相同，相同就记录下来，根据条件看是否覆盖val值    if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k))))      // 将第一个元素赋值给e，用e来记录      e = p;    //判断是否为红黑树节点    else if (p instanceof TreeNode)      e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);    //链表节点    else {      for (int binCount = 0; ; ++binCount) {        //遍历链表，如果找到hash，key相同的，记录下这个节点，跳出循环，没找到就尾插，尾插之后判断是否需要转为红黑树        //到达链表尾，插入这个节点        if ((e = p.next) == null) {          p.next = newNode(hash, key, value, null);          //链表中节点的数量到达阈值8，变成红黑树          if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st            treeifyBin(tab, hash);          break;        }        if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k))))          break;        p = e;      }    }    if (e != null) { // existing mapping for key      V oldValue = e.value;      // onlyIfAbsent为false或者旧值为null      if (!onlyIfAbsent || oldValue == null)        e.value = value;      afterNodeAccess(e);      return oldValue;    }  }  ++modCount;  if (++size > threshold)    resize();  afterNodeInsertion(evict);  return null;}
+  ```
 
-    
+  
 
 - 如何扩容：第一步把数组长度变为原来的两倍，jdk8时，不用重新计算hash，只用看看原来的hash值新增的一位是零还是1，如果是1这个元素在新数组中的位置，是原数组的位置加原数组长度，如果是零就插入到原数组中。
 
@@ -741,7 +654,7 @@ String、Integer等包装类的特性能够保证Hash值的不可更改性和计
 
 ### HashMap在JDK1.7和JDK1.8中有哪些不同？
 
-![20200623121232](Java基础知识复习.assets/20200623121232.jpg)
+![20200623121232](../images/20200623121232.jpg)
 
 ### ArrayList集合加入1万条数据，应该怎么提高效率
 
@@ -757,29 +670,14 @@ String、Integer等包装类的特性能够保证Hash值的不可更改性和计
 - 任务必须从线程运行
 
 ```java
-public class TaskThreadDemo {
-
-    public static void main(String[] args) {
-        PrintChar printA = new PrintChar('a', 100000);
-        PrintChar printB = new PrintChar('b', 100000);
-        PrintNumber printNumber = new PrintNumber(6, 100000);
-
-        Thread thread1 = new Thread(printA);
-        Thread thread2 = new Thread(printNumber);
-        Thread thread3 = new Thread(printB);
-
-        thread1.run();
-        thread2.run();
-        thread3.run();
-    }
-}
+public class TaskThreadDemo {    public static void main(String[] args) {        PrintChar printA = new PrintChar('a', 100000);        PrintChar printB = new PrintChar('b', 100000);        PrintNumber printNumber = new PrintNumber(6, 100000);        Thread thread1 = new Thread(printA);        Thread thread2 = new Thread(printNumber);        Thread thread3 = new Thread(printB);        thread1.run();        thread2.run();        thread3.run();    }}
 ```
 
 
 
 ### Thread类
 
-![image-20200614191746244](Java基础知识复习.assets/image-20200614191746244.png)
+![image-20200614191746244](../images/image-20200614191746244.png)
 
 
 
@@ -788,21 +686,12 @@ public class TaskThreadDemo {
 - 使用线程池可以高效执行任务
 - 为每个任务开一个新线程可能会限制吞吐量并且造成性能降低
 
-![image-20200614192217517](Java基础知识复习.assets/image-20200614192217517.png)
+![image-20200614192217517](../images/image-20200614192217517.png)
 
-![image-20200614192251915](Java基础知识复习.assets/image-20200614192251915.png)
+![image-20200614192251915](../images/image-20200614192251915.png)
 
 ```java
-public static void main(String[] args) {
-
-        ExecutorService executor = Executors.newFixedThreadPool(3);
-
-        executor.execute(new PrintChar('a', 100));
-        executor.execute(new PrintChar('b', 100));
-        executor.execute(new PrintNumber(5, 100));
-        
-        executor.shutdown();
-    }
+public static void main(String[] args) {        ExecutorService executor = Executors.newFixedThreadPool(3);        executor.execute(new PrintChar('a', 100));        executor.execute(new PrintChar('b', 100));        executor.execute(new PrintNumber(5, 100));                executor.shutdown();    }
 ```
 
 

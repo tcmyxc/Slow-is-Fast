@@ -1,1 +1,3 @@
 *.flv
+.ipynb_checkpoints/
+.vscode/

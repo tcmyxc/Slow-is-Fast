@@ -622,11 +622,153 @@ password
 
 转发（URL没变）
 
-## Session
+## Session和Cookie
 
-## Cookie
+session：客户端和服务器的一次交互就是会话
+
+cookie：服务器发给客户端的令牌，客户端每次访问需要带着这个令牌访问，不然我不承认
+
+### Cookie 示例
+
+1、从请求中拿 Cookie
+
+```java
+WebServlet(name = "cookieDemo", value = "/getCookie")
+public class CookieDemo extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 防止中文乱码
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8");
+
+        PrintWriter out = resp.getWriter();
+
+        // 从客户端获取cookie
+        Cookie[] cookies = req.getCookies();
+        // 判断 cookie 是否为空
+        if(cookies != null){
+            // 如果存在，就遍历一下
+            for(Cookie cookie : cookies){
+                if (cookie.getName().equals("lastLoginName")) {
+                    long lastLoginName = Long.parseLong(cookie.getValue());
+                    Date date = new Date(lastLoginName);
+                    out.write("上次访问的时间是" + date.toLocaleString());
+                }
+            }
+        }
+        else{
+            out.write("这是您近期第一次访问本站");
+        }
+
+        // 给客户端响应一个 cookie
+        Cookie cookie = new Cookie("name", "徐文祥");
+        Cookie cookie2 = new Cookie("lastLoginName", System.currentTimeMillis() + "");
+        resp.addCookie(cookie);
+        resp.addCookie(cookie2);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
+}
+```
+
+**运行结果**
+
+![image-20210720161646972](../images/image-20210720161646972.png)
+
+**浏览器 Cookie 查看**
+
+![image-20210720161710930](../images/image-20210720161710930.png)
+
+
+
+- 一个 Cookie 只能保存一个信息
+- 可以有多个 Cookie 发给服务器
+-  一个站点最多放 20 个，浏览器上限300个
+- Cookie 大小有限制，最多4kb
+
+
+
+如何删除 Cookie？
+
+- 不设置有效期（即过期时间为0），关闭就没了
+
+### Session（重点）
+
+- 服务器会给每一个用户（浏览器）创建一个 Session 对象
+- 一个 Session 独占一个浏览器，只要浏览器没关、Sesion 就存在
+- 用户登录之后，整个网站都能访问
+
+
+
+Session 和 Cookie 的区别
+
+
+
+
+
+**代码示例**
+
+```java
+@WebServlet(name = "sessionDemo01", value = "/sd01")
+public class SessionDemo01 extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 防止中文乱码
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8");
+
+        PrintWriter out = resp.getWriter();
+        out.write("Hello sessionDemo01<br/>");
+        // 获取 session
+        HttpSession session = req.getSession();
+        session.setAttribute("name", "徐文祥");
+        System.out.println(session.getId());
+        System.out.println(session.isNew());
+        if(session.isNew()){
+            out.write("Sesssion 创建成功" + session.getId());
+        }
+        else{
+            out.write("Session 未过期" + session.getId());
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
+}
+```
+
+
+
+![image-20210721203704871](../images/image-20210721203704871.png)
+
+![image-20210721203651611](../images/image-20210721203651611.png)
+
+从这里我们可以看出，Cookie 里面放了 Session 的 ID，然后每次访问，带着这个 ID 访问，服务器就能识别出这个是哪个 Session
+
+> 注销 Session ，手动注销，然后使生效即可（调用 invalidate 方法）
+
+
+
+Session 过期时间在 `web.xml` 文件配置
 
 ## JSP
+
+### 定义
+
+> JSP（全称JavaServer Pages）是由Sun Microsystems公司主导创建的一种动态网页技术标准。JSP部署于网络服务器上，可以响应客户端发送的请求，并根据请求内容动态地生成HTML、XML或其他格式文档的Web网页，然后返回给请求者。JSP技术以Java语言作为脚本语言，为用户的HTTP请求提供服务，并能与服务器上的其它Java程序共同处理复杂的业务需求。
+
+### JSP 原理
+
+JSP 本质上就是一个 Servlet
 
 ## 过滤器
 

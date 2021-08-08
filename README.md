@@ -47,6 +47,8 @@
 
 # JVM
 - [Win10 环境下编译 openjdk15](求职之路/Java/JVM虚拟机/Win10环境下编译openjdk15.md)
+- [JVM和Java体系结构](SomeNotes/JVM/notes/01-JVM和Java体系结构.md)
+- [类加载过程](SomeNotesJVM/notes/02-类加载过程.md)
 
 # Maven构建工具
 - [Maven构建工具](求职之路/Java/Maven工具/Maven学习笔记.md)

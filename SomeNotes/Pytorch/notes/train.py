@@ -6,6 +6,7 @@ import torchvision
 from vggnet import VGGNet
 from resnet import ResNet
 from mobilenetv1 import MobileNetV1_small
+from pre_resnet import pytorch_resnet34
 from cifar10_dataloader import train_data_loader, test_data_loader
 import os
 import tensorboardX
@@ -16,23 +17,28 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
 print(torch.__version__)
 epoch_num = 200
-lr = 0.01
+lr = 1e-3
 batch_size = 128
 
-net = MobileNetV1_small().to(device)
+net = pytorch_resnet34().to(device)
 
 # loss
 loss_func = nn.CrossEntropyLoss()
 
 # 优化器
-optimizer = torch.optim.Adam(params=net.parameters(), lr=lr)
+optimizer = torch.optim.SGD(params=net.parameters(), lr=lr,
+                            momentum=0.9, weight_decay=5e-4)
 
 # 动态调整学习率
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 
                                     step_size=5,# 5个 epoch 调整一次学习率
                                     gamma=0.9)
-if not os.path.exists("log"):
-        os.mkdir("log")
+model_path = "models/pytorch_resnet18"
+log_path = "log"
+if not os.path.exists(log_path):
+        os.mkdir(log_path)
+if not os.path.exists(model_path):
+    os.mkdir(model_path)
 
 writer = tensorboardX.SummaryWriter("log")
 
@@ -77,9 +83,8 @@ for epoch in range(epoch_num):
         step_n += 1
     
     # 保存模型
-    if not os.path.exists("models"):
-        os.mkdir("models")
-    torch.save(net.state_dict(), f"models/{epoch+1}.pth")
+
+    torch.save(net.state_dict(), f"{model_path}/{epoch+1}.pth")
 
     # 更新学习率
     scheduler.step()

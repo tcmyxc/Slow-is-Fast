@@ -20,13 +20,14 @@
       name: '学习笔记',
       nameLink: '#/README.md',
       repo: 'https://github.com/tcmyxc/Slow-is-Fast/',
-      maxLevel: 6,//最大支持渲染的标题层级
-      subMaxLevel: 4,// 侧边栏目录层级
+      maxLevel: 2,//最大支持渲染的标题层级
+      subMaxLevel: 2,// 侧边栏目录层级
       loadSidebar: true,// 加载侧边栏
-      coverpage: true,// 配置封面
+      coverpage: false,// 配置封面
       homepage: 'README.md',
       search: 'auto',
-      auto2top: true
+      auto2top: true,
+      sidebarDisplayLevel: 2, // set sidebar display level
     }
   </script>
  
@@ -47,6 +48,8 @@
   <!-- 支持LaTeX公式 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+  <!-- 侧边栏折叠 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 </body>
 </html>

@@ -8,7 +8,8 @@
 
 一步一个脚印，踏踏实实走下去，量变终将引起质变！
 
-个人博客(基本同步更新文章)：https://tcmyxc.github.io/
+个人博客(基本同步更新文章)：https://tcmyxc.github.io
+本仓库的GithubPages：https://tcmyxc.github.io/Slow-is-Fast
 
 # 基本功
 ## 计算机网络

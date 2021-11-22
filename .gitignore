@@ -6,3 +6,5 @@
 **/官方文档/
 **/.idea/
 **/.ipynb_checkpoints/
+.vscode/
+slides/

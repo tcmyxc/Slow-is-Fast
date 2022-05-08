@@ -1,3 +1,2 @@
-# Just-Java-Notes
- Java学习笔记
+# 学习笔记
 

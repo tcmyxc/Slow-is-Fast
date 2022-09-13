@@ -1,7 +1,5 @@
 # Java基础知识复习
 
-[TOC]
-
 ## 概述
 
 1. 一个Java程序至少要有一个类
@@ -373,12 +371,27 @@ import java.io.File;import java.io.FileNotFoundException;import java.io.PrintWri
 ## 异常处理
 
 ```java
-try{    statements;}catch(Exception1 exVar1){    statements;}catch(Exception2 exVar2){    statements;}...catch(ExceptionN exVarN){    statements;}finally{    }
+try{    
+    statements;
+}
+catch(Exception1 exVar1){    
+    statements;
+}
+catch(Exception2 exVar2){    
+    statements;
+}
+//...
+catch(ExceptionN exVarN){    
+    statements;
+}
+finally{   
+    
+}
 ```
 
 
 
-<img src="./images/image-20200611215659437.png" alt="image-20200611215659437" style="zoom:150%;" />
+![异常类](./images/image-20200611215659437.png)
 
 
 
@@ -484,16 +497,16 @@ try{    statements;}catch(Exception1 exVar1){    statements;}catch(Exception2 ex
 接口实现类：
 
 - `HashSet`
-  - 无序集合
-  - 元素可以为null
-  - 基于哈希表实现的，保证元素不重复
-  - 单个元素操作O(1)
+	- 无序集合
+	- 元素可以为null
+	- 基于哈希表实现的，保证元素不重复
+	- 单个元素操作O(1)
 - `LinkedHashSet`
-  - 链表实现
-  - 有序集合，顺序是插入时的顺序
+	- 链表实现
+	- 有序集合，顺序是插入时的顺序
 - `TresSet`
-  - 有序的
-  - 可以给元素强加一个顺序
+	- 有序的
+	- 可以给元素强加一个顺序
 
 
 
@@ -670,7 +683,19 @@ String、Integer等包装类的特性能够保证Hash值的不可更改性和计
 - 任务必须从线程运行
 
 ```java
-public class TaskThreadDemo {    public static void main(String[] args) {        PrintChar printA = new PrintChar('a', 100000);        PrintChar printB = new PrintChar('b', 100000);        PrintNumber printNumber = new PrintNumber(6, 100000);        Thread thread1 = new Thread(printA);        Thread thread2 = new Thread(printNumber);        Thread thread3 = new Thread(printB);        thread1.run();        thread2.run();        thread3.run();    }}
+public class TaskThreadDemo {    
+    public static void main(String[] args) {        
+        PrintChar printA = new PrintChar('a', 100000);        
+        PrintChar printB = new PrintChar('b', 100000);        
+        PrintNumber printNumber = new PrintNumber(6, 100000);        
+        Thread thread1 = new Thread(printA);        
+        Thread thread2 = new Thread(printNumber);        
+        Thread thread3 = new Thread(printB);        
+        thread1.run();        
+        thread2.run();        
+        thread3.run();    
+    }
+}
 ```
 
 
@@ -691,7 +716,13 @@ public class TaskThreadDemo {    public static void main(String[] args) {       
 ![image-20200614192251915](./images/image-20200614192251915.png)
 
 ```java
-public static void main(String[] args) {        ExecutorService executor = Executors.newFixedThreadPool(3);        executor.execute(new PrintChar('a', 100));        executor.execute(new PrintChar('b', 100));        executor.execute(new PrintNumber(5, 100));                executor.shutdown();    }
+public static void main(String[] args) {        
+    ExecutorService executor = Executors.newFixedThreadPool(3);        
+    executor.execute(new PrintChar('a', 100));        
+    executor.execute(new PrintChar('b', 100));        
+    executor.execute(new PrintNumber(5, 100));                
+    executor.shutdown();    
+}
 ```
 
 
@@ -700,10 +731,6 @@ public static void main(String[] args) {        ExecutorService executor = Execu
 
 - 如果只需要为一个任务创建一个线程，用Thread类
 - 如果需要为多个任务创建线程，用线程池
-
-
-
-
 
 ## Javabean
 
@@ -727,8 +754,7 @@ public static void main(String[] args) {        ExecutorService executor = Execu
 - 如果你使用了 **package** 语句，它必须是文件中除了注释之外的第一行代码
 - Java 包名按惯例一律小写，即使中间的单词也需要小写
 - 按照惯例，**package** 名称是类的创建者的反顺序的 Internet 域名。
-- 如果通过 ***** 导入了两个包含相同名字类名的类库 => 使用**全限定名**
-- （学到多态）
+- 如果通过` *` 导入了两个包含相同名字类名的类库 => 使用**全限定名**
 
 
 

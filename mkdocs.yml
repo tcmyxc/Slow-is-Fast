@@ -6,9 +6,8 @@ repo_url: https://github.com/tcmyxc/Slow-is-Fast
 theme:
   name: material
   # name: readthedocs
-  # custom_dir: overrides
   highlightjs: true
-  hljs_style: monokai-sublime
+  hljs_style: androidstudio
 
 # Extensions
 markdown_extensions:

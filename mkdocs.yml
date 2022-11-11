@@ -5,7 +5,8 @@ repo_url: https://github.com/tcmyxc/Slow-is-Fast
 
 theme:
   name: material
-#   name: readthedocs
+  # name: readthedocs
+  custom_dir: overrides
 
 # Extensions
 markdown_extensions:

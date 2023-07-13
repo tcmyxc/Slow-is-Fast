@@ -2,7 +2,7 @@
 
 ![MyBatis logo](Mybatis学习之路.assets/mybatis-logo.png)
 
-[toc]
+
 
 ## 简介
 

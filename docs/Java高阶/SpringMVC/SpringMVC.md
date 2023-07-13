@@ -1,6 +1,6 @@
 # SpringMVC
 
-[toc]
+
 
 ## 什么是SpirngMVC？
 

@@ -1,6 +1,6 @@
-# AQS原理
+# AQS和CAS原理
 
-## 概述
+## AQS概述
 
 全称是 `AbstractQueuedSynchronizer`，是阻塞式锁和相关的同步器工具的框架
 
@@ -88,5 +88,47 @@ if(tryRelease(arg)){
 }
 ```
 
+## CAS
 
+不加锁，同样实现线程安全
 
+CAS（compareAndSet或者compareAndSwap）
+
+### 原子类
+
+以 `AtomicInteger` 类为例：
+
+```java
+public class AtomicInteger extends Number implements java.io.Serializable {
+
+    // setup to use Unsafe.compareAndSwapInt for updates
+    private static final Unsafe unsafe = Unsafe.getUnsafe();
+    private static final long valueOffset;
+
+    static {
+        try {
+            valueOffset = unsafe.objectFieldOffset
+                (AtomicInteger.class.getDeclaredField("value"));
+        } catch (Exception ex) { throw new Error(ex); }
+    }
+
+    private volatile int value;
+    
+    /**
+     * Atomically sets the value to the given updated value
+     * if the current value {@code ==} the expected value.
+     *
+     * @param expect the expected value
+     * @param update the new value
+     * @return {@code true} if successful. False return indicates that
+     * the actual value was not equal to the expected value.
+     */
+    // 如果当前值和线程里面的旧值一样, 则把当前值更新成线程想要更新的值
+    // 如果不一样, 则不修改
+    public final boolean compareAndSet(int expect, int update) {
+        return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
+    }
+}
+```
+
+看到 P161

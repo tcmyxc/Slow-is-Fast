@@ -138,7 +138,36 @@ insert 的时候，InnoDB 会完成一个 delete；delete 的时候，InnoDB 会
 
 此外，undo log 会产生 redo log，也就是undo log的产生会伴随着redo log的产生，这是因为undo log也需要持久性的保护。
 
+## binlog
 
+二进制日志，记录了DDL（数据定义语言）和DML（数据操纵语言），但是不包括查询语句
+
+> 记录了数据库的表结构，以及对数据的修改操作
+
+- 用于灾难时的数据恢复
+- 用于主从复制
+
+
+
+查看日志文件的语句：
+
+```bash
+mysqlbinlog [options] log-files1 log-files2 ...
+
+选项 ：
+-d, --database=name 指定数据库名称，只列出指定的数据库相关操作。
+-o, --offset 忽略掉日志中的前n行命令。
+-v 将行时间（数据变更）转变成 SQL 语句
+-vv 将行时间（数据变更）转变成 SQL 语句, 同时输出注释信息
+```
+
+
+
+主从复制的过程：
+
+1. Master 主库在事务提交时，会把数据变更记录在二进制日志文件 Binlog 中
+2. 从库读取主库的二进制日志文件 Binlog ，写入到从库的中继日志 Relay Log 
+3. slave重做中继日志中的事件，将改变反映它自己的数据。
 
 
 

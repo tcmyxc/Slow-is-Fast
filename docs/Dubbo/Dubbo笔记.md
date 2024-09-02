@@ -496,6 +496,8 @@ Exception in thread "main" org.springframework.beans.factory.BeanCreationExcepti
 
 服务级别、方法级别均可配置
 
+> Dubbo 提供的是客户端负载均衡，即由 Consumer 通过负载均衡算法得出需要将请求提交到哪个 Provider 实例。
+
 
 
 ### 点对点直连
@@ -508,10 +510,17 @@ Exception in thread "main" org.springframework.beans.factory.BeanCreationExcepti
 
 
 
-在 `properties` 配置文件中配置即可
+在消费者的 `properties` 配置文件中配置即可
 
 ```properties
 com.alibaba.xxx.XxxService=dubbo://localhost:20890
+```
+
+也可以使用注解的方式，比如：
+
+```java
+@Reference(url = "127.0.0.1:20881") // dubbo的注解，直连服务提供者
+UserService userService;
 ```
 
 

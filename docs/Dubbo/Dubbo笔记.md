@@ -486,7 +486,7 @@ Exception in thread "main" org.springframework.beans.factory.BeanCreationExcepti
 - 随机（dubbo默认策略）
 - 轮询
 - **最少活跃调用数**，相同活跃数的随机。
-    - 活跃数指调用前后计数差。
+    - 活跃数指调用前后计数差，可以理解为**请求的处理时间**。
     - 使慢的提供者收到更少请求，因为越慢的提供者的调用前后计数差会越大。
 - **一致性 Hash**。
     - 相同参数的请求总是发到同一提供者。
@@ -522,6 +522,14 @@ com.alibaba.xxx.XxxService=dubbo://localhost:20890
 @Reference(url = "127.0.0.1:20881") // dubbo的注解，直连服务提供者
 UserService userService;
 ```
+
+
+
+## 其他注意点
+
+1、映射规则
+
+- `dubbo.protocol.rmi.port=1099` 相当于 `<dubbo:protocol id="rmi" name="rmi" port="1099" />`
 
 
 

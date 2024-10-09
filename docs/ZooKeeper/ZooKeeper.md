@@ -1,5 +1,17 @@
 # ZooKeeper 学习笔记
 
+## 命令行使用
+
+```bash
+
+
+# 进入bin目录
+# 客户端连接
+./zkCli.sh -server localhost:2181
+```
+
+
+
 ## 配置文件讲解
 
 ```sh

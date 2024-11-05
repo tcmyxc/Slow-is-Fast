@@ -1362,3 +1362,13 @@ memoryStoreEvictionPolicy="LRU"/>
 - 缓存不会定时进行刷新（也就是说，没有刷新间隔）。
 - 缓存会保存列表或对象（无论查询方法返回哪种）的 1024 个引用。
 - 缓存会被视为读/写缓存，这意味着获取到的对象并不是共享的，可以安全地被调用者修改，而不干扰其他调用者或线程所做的潜在修改。
+
+
+
+开发注意点
+
+1、mybatis的方法名不能重载
+
+Mybatis使用package+Mapper+method全限名作为key
+
+> https://www.jb51.net/program/32721906y.htm

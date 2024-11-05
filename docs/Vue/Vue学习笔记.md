@@ -585,3 +585,202 @@ watch: {
 
 
 
+#### 列表过滤
+
+场景：根据输入过滤名字
+
+```html
+<div id="app">
+<input placeholder="输入名字过滤" v-model="keyword">
+<ul>
+    <li v-for="(p, idx) in  filterPersonArr" :key="p.id">
+        姓名：{{p.name}}，年龄：{{p.age}}
+    </li>
+</ul>
+</div>
+```
+
+
+
+watch实现：
+
+```javascript
+new Vue({
+    el: "#app",
+    data: {
+        personArr: [
+            { id: "001", name: "马冬梅", age: 18 },
+            { id: "002", name: "马东宇", age: 35 },
+            { id: "003", name: "周杰伦", age: 20 },
+            { id: "004", name: "粥饼伦", age: 40 },
+        ],
+        filterPersonArr: [],
+        keyword: "",
+    },
+    watch: {
+        keyword: {
+            immediate: true,
+            handler(val) {
+                this.filterPersonArr = this.personArr.filter((p) => {
+                    return p.name.indexOf(val) !== -1
+                })
+            }
+        }
+    }
+})
+```
+
+
+
+使用computed实现：
+```javascript
+new Vue({
+    el: "#app",
+    data: {
+        personArr: [
+            { id: "001", name: "马冬梅", age: 18 },
+            { id: "002", name: "马东宇", age: 35 },
+            { id: "003", name: "周杰伦", age: 20 },
+            { id: "004", name: "粥饼伦", age: 40 },
+        ],
+        keyword: "",
+    },
+    computed: {
+        filterPersonArr() {
+            return this.personArr.filter((p) => {
+                return p.name.indexOf(this.keyword) !== -1
+            })
+        }
+    },
+})
+```
+
+
+
+#### 列表排序
+
+```html
+<div id="app">
+    <input placeholder="输入过滤条件" v-model="keyword">
+    <button type="text" @click="sortType = 2">年龄升序</button>
+    <button type="text" @click="sortType = 1">年龄降序</button>
+    <button type="text" @click="sortType = 0">原始顺序</button>
+    <ul>
+        <li v-for="(p, idx) in  filterPersonArr" :key="p.id">
+            姓名：{{p.name}}，年龄：{{p.age}}
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    new Vue({
+        el: "#app",
+        data: {
+            personArr: [
+                { id: "001", name: "马冬梅", age: 18 },
+                { id: "002", name: "马东宇", age: 35 },
+                { id: "003", name: "周杰伦", age: 20 },
+                { id: "004", name: "粥饼伦", age: 40 },
+            ],
+            keyword: "",
+            sortType: 0,
+        },
+        computed: {
+            filterPersonArr() {
+                const arr = this.personArr.filter((p) => {
+                    return p.name.indexOf(this.keyword) !== -1
+                })
+
+                // 排序逻辑
+                if(this.sortType){
+                    arr.sort((p1, p2)=>{
+                        return this.sortType === 2 ? p1.age - p2.age : p2.age - p1.age
+                    })
+                }
+
+                return arr
+            }
+        },
+    })
+</script>
+```
+
+
+
+#### 收集表单数据
+
+- text，password收集的是value的值，用户输入的就是value
+- radio收集的是value的值，但是需要自定义value属性的值
+- checkbox：如果input没有自定义value属性的值，那就是checked对应的布尔值
+
+```html
+<div id="app">
+    <form @submit.prevent="submitInfo">
+        账号：<input type="text" v-model.trim="account"><br/>
+        密码：<input type="password" v-model="password"><br/>
+        性别：
+        男<input type="radio" name="sex" v-model="sex" value="male">
+        女<input type="radio" name="sex" v-model="sex" value="female"><br/>
+        爱好：
+        抽烟<input type="checkbox" v-model="hobby" value="smoke">
+        喝酒<input type="checkbox" v-model="hobby" value="drink">
+        烫头<input type="checkbox" v-model="hobby" value="perm"><br/>
+        学校：
+        <select v-model="school">
+            <option value="">请选择学校</option>
+            <option value="pku">北京大学</option>
+            <option value="tsu">清华大学</option>
+            <option value="zju">浙江大学</option>
+        </select><br/>
+        <input type="checkbox" v-model="agree">阅读并接受用户协议<br/><br/>
+        <button>提交</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+    // 创建vue实例
+    new Vue({
+        el: "#app",// 指定当前vue实例为哪个容器服务，一般为CSS选择器字符串
+        data: {// data用于存储数据，供el绑定的容器使用
+           account: "",
+           password: "",
+           sex: "",
+           hobby: [],
+           school: "",
+           agree: "",
+        },
+        methods: {
+            submitInfo(){
+                console.log(this.sex)
+            }
+        },
+    })
+</script>
+```
+
+
+
+### 内置指令
+
+`v-text`：向其所在的节点中渲染文本内容
+
+`v-html`：向其所在的节点中渲染内容（支持html标签）【有安全风险】
+
+`v-cloak`：一个特殊属性。待vue实例创建完毕并接管容器后会移除该属性。和 CSS 规则如 `[v-cloak] { display: none }` 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
+
+
+
+### 组件化编程
+
+#### 非单文件组件
+
+一个文件里面有多个组件
+
+
+
+#### 单文件组件
+
+一个文件里面只有一个组件
+
+
+

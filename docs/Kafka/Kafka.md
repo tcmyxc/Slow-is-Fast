@@ -8,7 +8,9 @@
 - 一般是临时存储消息
 - 数据存储是K，V键值对的形式
 
-## 2、消息队列的应用场景
+
+
+消息队列的应用场景：
 
 1. 异步处理
 2. 业务解耦
@@ -31,7 +33,7 @@
 └── site-docs
 ```
 
-
+### 启动ZK
 
 kafka 的启动依赖 zookeeper，需要预先启动，可以启动 Kafka 内置的 zookeeper，也可以启动自己安装的：
 
@@ -45,6 +47,8 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 
 
 
+### 启动kafka
+
 启动单节点 kafka 用于测试：
 
 ```bash
@@ -52,6 +56,8 @@ bin/kafka-server-start.sh config/server.properties
 ```
 
 
+
+### 验证
 
 可以使用`JPS`查看进程
 
@@ -70,7 +76,7 @@ bin/kafka-server-start.sh config/server.properties
 使用bin目录下的kafka-topics.sh来创建topic
 
 ```bash
-# 创建用于测试主题
+# 创建测试主题
 bin/kafka-topics.sh --bootstrap-server 127.0.0.1:9092 \
                     --topic Hello-Kafka \
                     --create
@@ -254,4 +260,15 @@ public class SimpleConsumer {
 - 主题中的数据是不能修改的
 
 ![image-20240918162858151](./images/image-20240918162858151.png)
+
+
+
+## 分区
+
+Kafka 有着默认的分区机制：
+
+- 如果指定了分区，则用指定的
+- 如果没指定
+	- 如果键值为 null， 则使用轮询 (Round Robin) 算法将消息均衡地分布到各个分区上；
+	- 如果键值不为 null，那么 Kafka 会使用内置的散列算法对键进行散列，然后分布到各个分区上（1.1.1版本的逻辑是这样的）；
 
